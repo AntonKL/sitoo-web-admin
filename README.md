@@ -1,4 +1,4 @@
-# Site web admin
+# Sitoo web admin
 
 This is a demo project, build as part of a job application.
 
@@ -25,4 +25,4 @@ The project uses [dotenv](https://www.npmjs.com/package/dotenv) to provide file 
 
 ## Deps
 
-* Node.js (project built with v10.15.1, but might run with other versions as well. No guaranties. [Stuff can break]https://twitter.com/dan_abramov/status/1045809734069170176)
+* Node.js (project built with v10.15.1, but might run with other versions as well. No guaranties. [Stuff can break](https://twitter.com/dan_abramov/status/1045809734069170176)
