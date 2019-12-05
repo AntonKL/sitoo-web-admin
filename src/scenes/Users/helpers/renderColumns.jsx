@@ -1,11 +1,16 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import Moment from 'react-moment';
+import 'moment/locale/sv';
 import {
   Dropdown, Menu, Icon, Modal,
 } from 'antd';
 import UpdateUser from '../scenes/UpdateUser';
 import { actionCreators as actions } from '../../../store/Users';
 import store from '../../../store/configurateStore';
+
+Moment.globalLocale = 'sv';
+Moment.globalFormat = 'D MMM YYYY HH:mm';
 
 const showConfirm = (record) => {
   Modal.confirm({
@@ -22,7 +27,6 @@ const columns = [
   {
     title: 'Name',
     dataIndex: 'namefirst',
-    ellipsis: true,
     render: (_text, record) => (
       <>
         {record.namefirst}
@@ -35,6 +39,22 @@ const columns = [
     title: 'Email',
     dataIndex: 'email',
     ellipsis: true,
+  },
+  {
+    title: 'Created',
+    dataIndex: 'datecreated',
+    ellipsis: true,
+    render: (text) => (
+      <Moment unix>{text}</Moment>
+    ),
+  },
+  {
+    title: 'Last modified',
+    dataIndex: 'datemodified',
+    ellipsis: true,
+    render: (text) => (
+      <Moment unix>{text}</Moment>
+    ),
   },
   {
     title: 'Operations',

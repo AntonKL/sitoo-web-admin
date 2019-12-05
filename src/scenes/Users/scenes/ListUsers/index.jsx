@@ -34,7 +34,7 @@ const Users = () => {
       <Table
         columns={columns}
         dataSource={users}
-        scroll={{ x: 400 }}
+        scroll={{ x: 700 }}
         style={{ paddingLeft: 24, paddingRight: 24, paddingBottom: 8 }}
         footer={footer}
         loading={content.isLoading}
