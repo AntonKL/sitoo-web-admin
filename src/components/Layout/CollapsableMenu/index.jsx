@@ -24,6 +24,7 @@ const CollapsableMenu = ({ menu }) => {
           defaultSelectedKeys={['users']}
           selectedKeys={[location.pathname]}
           style={{ lineHeight: '64px' }}
+          onClick={() => setVisibility(false)}
         >
           {menu.map((item) => (
             <Menu.Item key={item.path}>
