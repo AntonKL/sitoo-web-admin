@@ -24,6 +24,8 @@ The project uses [dotenv](https://www.npmjs.com/package/dotenv) to provide file 
 1. Rename `.env.example` => `.env`
 2. Enter your API-key in .env `REACT_APP_SITOO_API_KEY={enter your sitoo api key here}`
 
+Please note that you need to restart React Create App server after each change to .env-file.
+
 ## Deps
 
 * Node.js (project built with v10.15.1, but might run with other versions as well. No guaranties. [Stuff can break](https://twitter.com/dan_abramov/status/1045809734069170176)
