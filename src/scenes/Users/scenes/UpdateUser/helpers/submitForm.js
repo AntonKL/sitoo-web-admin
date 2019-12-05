@@ -1,3 +1,4 @@
+import { message } from 'antd';
 import axios from '../../../../../utils/axiosInstance';
 import { SITE_ID } from '../../../../../config/constants';
 import { actionCreators as actions } from '../../../../../store/Modal';
@@ -20,6 +21,7 @@ const submitForm = (values, props) => {
     ...lastName && { namelast: lastName },
     ...email && { email },
   }).then(() => {
+    message.success('User successfully updated');
     store.dispatch(userActions.getUsers());
     store.dispatch(actions.closeModal());
     setTimeout(reset);

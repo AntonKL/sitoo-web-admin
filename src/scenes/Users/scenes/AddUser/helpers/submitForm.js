@@ -1,6 +1,6 @@
+import { message } from 'antd';
 import axios from '../../../../../utils/axiosInstance';
 import { SITE_ID } from '../../../../../config/constants';
-// eslint-disable-next-line import/no-cycle
 import { actionCreators as actions } from '../../../../../store/Modal';
 import { actionCreators as userActions } from '../../../../../store/Users';
 import store from '../../../../../store/configurateStore';
@@ -16,6 +16,7 @@ const submitForm = (values, props) => {
     ...lastName && { namelast: lastName },
     ...email && { email },
   }).then(() => {
+    message.success('User successfully created');
     store.dispatch(userActions.getUsers());
     store.dispatch(actions.closeModal());
     setTimeout(reset);
