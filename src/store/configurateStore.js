@@ -8,7 +8,7 @@ import * as UsersData from './Users';
 import * as UiData from './Ui';
 import * as ModalData from './Modal';
 
-const configureStore = (history, initialState) => {
+const configureStore = (_history, initialState) => {
   const reducers = {
     usersData: UsersData.reducer,
     uiData: UiData.reducer,
