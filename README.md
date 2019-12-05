@@ -22,7 +22,7 @@ It also raised a question on how to structure the project, the good ol' containe
 The project uses [dotenv](https://www.npmjs.com/package/dotenv) to provide file with enviromental variables during build time. Here's how you set it up:
 
 1. Rename `.env.example` => `.env`
-2. Enter your API-key in .env `REACT_APP_SITOO_API_KEY={enter your sitoo api key here}`
+2. Enter your API-key in .env `REACT_APP_SITOO_API_KEY=${enter your sitoo api key here}`
 
 Please note that you need to restart React Create App server after each change to .env-file.
 
