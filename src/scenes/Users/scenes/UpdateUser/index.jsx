@@ -8,6 +8,7 @@ import UserForm from '../../components/Form';
 import { actionCreators as actions } from '../../../../store/Modal';
 import submitForm from './helpers/submitForm';
 import { modalNames } from '../../../../utils/constants';
+import validate from '../../helpers/validate';
 
 const UpdateUser = ({
   user: {
@@ -24,6 +25,7 @@ const UpdateUser = ({
       <Form
         onSubmit={submitForm}
         userid={userid}
+        validate={validate}
         initialValues={{
           firstName: namefirst,
           lastName: namelast,

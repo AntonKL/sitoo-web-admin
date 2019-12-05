@@ -1,10 +1,10 @@
-import { FORM_ERROR } from 'final-form';
 import axios from '../../../../../utils/axiosInstance';
 import { SITE_ID } from '../../../../../config/constants';
 // eslint-disable-next-line import/no-cycle
 import { actionCreators as actions } from '../../../../../store/Modal';
 import { actionCreators as userActions } from '../../../../../store/Users';
 import store from '../../../../../store/configurateStore';
+import handleError from '../../../../../utils/handleError';
 
 const url = `/sites/${SITE_ID}/users.json`;
 
@@ -19,7 +19,7 @@ const submitForm = (values, props) => {
     store.dispatch(userActions.getUsers());
     store.dispatch(actions.closeModal());
     setTimeout(reset);
-  }).catch((error) => ({ [FORM_ERROR]: error.response.data.errortext }));
+  }).catch((error) => handleError(error));
 };
 
 export default submitForm;
